@@ -290,3 +290,6 @@ You might have seen that there is a ``headers`` field in the ``HttpMethod``-deri
 * There is no way to declare elementary RAML types, so for example you cannot model the declaration of a type ``birthday`` that is an alias for ``date-only``. If you need that you should declare ``birthday`` in an external file and import it using the ``types`` parameter of the ``<<RamlApi>>`` stereotype.
 * Multiple operations stereotyped with the same HTTP method lead to the creation of an invalid RAML file. It would be possible to support multiple, say, POST operations as long as they accept different mediaTypes. This is unsupported in the current release.
 
+# Your contribution
+
+uml2raml is developed in the context of a research project. Science needs you: if you use (or just test) uml2raml please consider responding to [this](https://goo.gl/forms/WZvOYO9ICgHYv4Nh1) brief questionnaire, thanks!
