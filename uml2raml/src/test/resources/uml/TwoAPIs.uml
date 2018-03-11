@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RestProfile="http:///schemas/RestProfile/_IQpo0BaCEeijf_nOsSz-FA/40" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/RestProfile/_IQpo0BaCEeijf_nOsSz-FA/40 rest.profile.uml#_IQqP4BaCEeijf_nOsSz-FA">
+  <uml:Model xmi:id="_7tGo0A2mEeiBhZ-ujYM-1Q" name="TwoAPIs">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_7xTMUA2mEeiBhZ-ujYM-1Q">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="__EmJEA2mEeiBhZ-ujYM-1Q" name="APIOne">
+      <packagedElement xmi:type="uml:Class" xmi:id="_E0VTEA2nEeiBhZ-ujYM-1Q" name="Foo"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ARWQEA2nEeiBhZ-ujYM-1Q" name="APITwo">
+      <packagedElement xmi:type="uml:Class" xmi:id="_INNTYA2nEeiBhZ-ujYM-1Q" name="Bar"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_xSvmUA30Eei21-hkZOWeaA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_K3UJEBaCEeijf_nOsSz-FA" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_K3UJERaCEeijf_nOsSz-FA" key="Version" value="0.0.34"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_K3UJEhaCEeijf_nOsSz-FA" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_K3UJExaCEeijf_nOsSz-FA" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_K3UJFBaCEeijf_nOsSz-FA" key="Date" value="2018-02-19"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_K3UJFRaCEeijf_nOsSz-FA" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xSwNYA30Eei21-hkZOWeaA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="raml.profile.uml#_v1d3wBWOEeizeM2S7qd3RQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="raml.profile.uml#_BDqk0Lc1EeWi7fsIsJk0Cg"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_xSw0dQ30Eei21-hkZOWeaA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_K5DOcBaCEeijf_nOsSz-FA" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_K5DOcRaCEeijf_nOsSz-FA" key="Version" value="0.0.41"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_K5DOchaCEeijf_nOsSz-FA" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_K5DOcxaCEeijf_nOsSz-FA" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_K5DOdBaCEeijf_nOsSz-FA" key="Date" value="2018-02-20"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_K5DOdRaCEeijf_nOsSz-FA" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xSw0dg30Eei21-hkZOWeaA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="rest.profile.uml#_IQqP4BaCEeijf_nOsSz-FA"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="rest.profile.uml#_tjKx8KiUEeWwcK3_Xosvcg"/>
+    </profileApplication>
+  </uml:Model>
+  <RestProfile:API xmi:id="_ycgDsA30Eei21-hkZOWeaA" base_Package="__EmJEA2mEeiBhZ-ujYM-1Q" name="APIOne" baseUri="http://one.org"/>
+  <RestProfile:API xmi:id="_zEa_UA30Eei21-hkZOWeaA" base_Package="_ARWQEA2nEeiBhZ-ujYM-1Q" name="APITwo" baseUri="http://two.org"/>
+  <RestProfile:Resource xmi:id="_1rzRQA30Eei21-hkZOWeaA" base_Class="_E0VTEA2nEeiBhZ-ujYM-1Q" path="/foo"/>
+  <RestProfile:Resource xmi:id="_2_KWkA30Eei21-hkZOWeaA" base_Class="_INNTYA2nEeiBhZ-ujYM-1Q" path="/bar"/>
+</xmi:XMI>

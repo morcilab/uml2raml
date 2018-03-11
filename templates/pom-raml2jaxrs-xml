@@ -1,0 +1,102 @@
+<!-- 
+This is a simple pom.xml prototype for a Maven project that
+creates a JEE-deployable war file implementing an API
+using uml2raml and raml-to-jax-rs - https://github.com/mulesoft-labs/raml-for-jax-rs.
+This uses properties extensively for configuration purposes, you may want to
+move to something a little more refined to deal with versioning management.
+If you import that into Eclipse, m2e will complain about lifecycle
+management issues, just accept one of the fixes it proposes.
+ -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.foo.bar</groupId>
+  <artifactId>foobarbaz</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  	<properties>
+		<java.version>1.8</java.version>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<uml2raml.version>1.0.0</uml2raml.version>
+		<raml2jaxrs.version>2.1.0</raml2jaxrs.version>
+		<!-- you may want to change the following props -->
+		<uml.file>${project.basedir}/src/main/resources/api.uml</uml.file>
+		<raml.file>${project.basedir}/src/main/resources/api.raml</raml.file>
+		<uml2raml.generate.description.files>true</uml2raml.generate.description.files>
+		<uml2raml.description.path>${project.basedir}/src/main/resources</uml2raml.description.path>
+		<!-- You need to set the following to true to work around a bug in raml-to-jax-rs prior to version 3 -->		
+		<uml2raml.array.as.types>true</uml2raml.array.as.types>
+		<generation.main.package>${project.groupId}.generated</generation.main.package>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>javax.ws.rs</groupId>
+			<artifactId>javax.ws.rs-api</artifactId>
+			<version>2.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.raml.jaxrs</groupId>
+			<artifactId>jaxrs-code-generator</artifactId>
+			<version>${raml2jaxrs.version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>net.morcilab.uml2raml</groupId>
+				<artifactId>uml2raml-maven-plugin</artifactId>
+				<version>${uml2raml.version}</version>
+				<executions>
+					<execution>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>uml2raml</goal>
+						</goals>
+						<configuration>
+							<verbose>true</verbose>
+							<umlFile>${uml.file}</umlFile>
+							<ramlFile>${raml.file}</ramlFile>
+							<generateDescriptionFiles>${uml2raml.generate.description.files}</generateDescriptionFiles>
+							<descriptionPath>${uml2raml.description.path}</descriptionPath>
+							<arrayAsTypes>${uml2raml.array.as.types}</arrayAsTypes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.raml.jaxrs</groupId>
+				<artifactId>raml-to-jaxrs-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<ramlFile>${raml.file}</ramlFile>
+							<resourcePackage>${generation.main.package}.res</resourcePackage>
+							<modelPackage>${generation.main.package}.model</modelPackage>
+							<supportPackage>${generation.main.package}.gen</supportPackage>
+							<jaxrsVersion>2.0</jaxrsVersion>
+							<jsonMapper>jackson2</jsonMapper>
+							<jsonMapperConfiguration>
+								<includeHashcodeAndEquals>true</includeHashcodeAndEquals>
+							</jsonMapperConfiguration>
+							<generateTypesWith>
+								<value>jackson</value>
+							</generateTypesWith>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.0</version>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

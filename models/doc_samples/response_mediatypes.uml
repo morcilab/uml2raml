@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RamlProfile="http:///schemas/RamlProfile/_5zgYgCJjEeiubr5XleL7dg/79" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/RamlProfile/_5zgYgCJjEeiubr5XleL7dg/79 ../raml.profile.uml#_853sgCJjEeiubr5XleL7dg">
+  <uml:Model xmi:id="_PDCSECCHEeiRwcX64aBAzw" name="doc_samples">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_IIbkgCCUEeiRwcX64aBAzw" annotatedElement="_uFi5ICCNEeiRwcX64aBAzw">
+      <body>InvoiceJSON is returned for mediaType application/json, 
+InvoiceXML is returned for application/xml</body>
+    </ownedComment>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_PIqY8CCHEeiRwcX64aBAzw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_YULtUCCHEeiRwcX64aBAzw">
+      <importedPackage xmi:type="uml:Package" href="raml.profile.uml#_li3LIBTAEeidgvnOijRjEQ"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_pCrcMCCNEeiRwcX64aBAzw" name="OrdersAPI">
+      <packagedElement xmi:type="uml:Class" xmi:id="_uFi5ICCNEeiRwcX64aBAzw" name="Orders">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_OtPAMCCSEeiRwcX64aBAzw" name="getInvoice">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_c2INgCCSEeiRwcX64aBAzw" name="invoiceId">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_aFDNACCSEeiRwcX64aBAzw" name="ij" type="_HF6CcCCSEeiRwcX64aBAzw" direction="out"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_P0siECCTEeiRwcX64aBAzw" name="ix" type="_5MGkkCCSEeiRwcX64aBAzw" direction="out"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_EVTjECCSEeiRwcX64aBAzw" name="Model">
+      <packagedElement xmi:type="uml:Class" xmi:id="_HF6CcCCSEeiRwcX64aBAzw" name="InvoiceJSON"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_5MGkkCCSEeiRwcX64aBAzw" name="InvoiceXML"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_RYYY0CCHEeiRwcX64aBAzw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RYtwASCHEeiRwcX64aBAzw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RYtwAiCHEeiRwcX64aBAzw" key="Version" value="0.0.73"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RYtwAyCHEeiRwcX64aBAzw" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RYtwBCCHEeiRwcX64aBAzw" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RYtwBSCHEeiRwcX64aBAzw" key="Date" value="2018-03-05"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RYtwBiCHEeiRwcX64aBAzw" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RYtwACCHEeiRwcX64aBAzw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="raml.profile.uml#_fB6RYCAKEeiRwcX64aBAzw"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="raml.profile.uml#_BDqk0Lc1EeWi7fsIsJk0Cg"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_TgAIcyCOEeiRwcX64aBAzw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-XPiECJmEeiubr5XleL7dg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-XPiESJmEeiubr5XleL7dg" key="Version" value="0.0.80"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-XPiEiJmEeiubr5XleL7dg" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-XPiEyJmEeiubr5XleL7dg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-XPiFCJmEeiubr5XleL7dg" key="Date" value="2018-03-08"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-XPiFSJmEeiubr5XleL7dg" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TgAvgCCOEeiRwcX64aBAzw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../raml.profile.uml#_853sgCJjEeiubr5XleL7dg"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="../raml.profile.uml#_BDqk0Lc1EeWi7fsIsJk0Cg"/>
+    </profileApplication>
+  </uml:Model>
+  <RamlProfile:RamlApi xmi:id="_q8sR0CCNEeiRwcX64aBAzw" base_Package="_pCrcMCCNEeiRwcX64aBAzw"/>
+  <RamlProfile:RamlResource xmi:id="_xiObYCCNEeiRwcX64aBAzw" base_Class="_uFi5ICCNEeiRwcX64aBAzw" path="/recipes"/>
+  <RamlProfile:JsonSchema xmi:id="_JjjwoCCSEeiRwcX64aBAzw" base_Class="_HF6CcCCSEeiRwcX64aBAzw" schema="invoice.json"/>
+  <RamlProfile:Get xmi:id="_WIssMCCSEeiRwcX64aBAzw" base_Operation="_OtPAMCCSEeiRwcX64aBAzw"/>
+  <RamlProfile:HttpResponse xmi:id="_K21g8CCTEeiRwcX64aBAzw" base_Parameter="_aFDNACCSEeiRwcX64aBAzw" mediaType="application/json"/>
+  <RamlProfile:HttpResponse xmi:id="_RNDcICCTEeiRwcX64aBAzw" base_Parameter="_P0siECCTEeiRwcX64aBAzw" mediaType="application/xml"/>
+  <RamlProfile:XmlSchema xmi:id="_t7NCoCCTEeiRwcX64aBAzw" base_Class="_5MGkkCCSEeiRwcX64aBAzw" schema="invoice.xsd"/>
+</xmi:XMI>

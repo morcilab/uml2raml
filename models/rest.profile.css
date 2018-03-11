@@ -1,0 +1,61 @@
+StereotypeComment {
+   visible:false;
+}
+
+Label[type=StereotypeLabel]{
+	depth:"none";
+}
+
+Package[appliedStereotypes~="Api"]{
+    lineColor: darkgreen;
+}
+
+Package[appliedStereotypes~="RamlApi"]{
+    lineColor: darkgreen;
+}
+
+Class[appliedStereotypes~="Resource"]{
+	fillColor: #cbe3cb;
+	gradient: none
+}
+
+Class[appliedStereotypes~="RamlResource"]{
+	fillColor: #cbe3cb;
+	gradient: none
+}
+
+Class[appliedStereotypes~="ApiModel"]{
+	fillColor: #fee1de;
+	gradient: none
+}
+
+DataType[appliedStereotypes~="FacetedScalar"]{
+	fillColor: #fee1de;
+	gradient: none
+}
+
+DataType[appliedStereotypes~="FacetedNumber"]{
+	fillColor: #fee1de;
+	gradient: none
+}
+
+DataType[appliedStereotypes~="FacetedString"]{
+	fillColor: #fee1de;
+	gradient: none
+}
+
+DataType[appliedStereotypes~="FacetedFile"]{
+	fillColor: #fee1de;
+	gradient: none
+}
+
+Class[appliedStereotypes~="JsonSchema"]{
+	fillColor: #fee1de;
+	gradient: none
+}
+
+Class[appliedStereotypes~="XmlSchema"]{
+	fillColor: #fee1de;
+	gradient: none
+}
+

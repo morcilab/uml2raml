@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:css="http://www.eclipse.org/papyrus/infra/gmfdiag/css" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <notation:Diagram xmi:id="_Yj9bcAgtEeiNxujlVpSD2Q" type="PapyrusUMLClassDiagram" name="Class Diagram" measurementUnit="Pixel">
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_Yj-CgAgtEeiNxujlVpSD2Q" name="diagram_compatibility_version" stringValue="1.3.0"/>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_Yj-CgQgtEeiNxujlVpSD2Q"/>
+    <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_Yj-CgggtEeiNxujlVpSD2Q" diagramKindId="org.eclipse.papyrus.uml.diagram.class">
+      <owner xmi:type="uml:Model" href="empty.uml#_YaD4kAgtEeiNxujlVpSD2Q"/>
+    </styles>
+    <styles xmi:type="notation:EObjectListValueStyle" xmi:id="_S_CggCB6EeiRwcX64aBAzw" name="css_stylesheets" eObjectListValue="_S_DHkCB6EeiRwcX64aBAzw"/>
+    <element xmi:type="uml:Model" href="empty.uml#_YaD4kAgtEeiNxujlVpSD2Q"/>
+  </notation:Diagram>
+  <css:StyleSheetReference xmi:id="_S_DHkCB6EeiRwcX64aBAzw" path="rest.profile.css"/>
+</xmi:XMI>

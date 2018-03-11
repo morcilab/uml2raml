@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RamlProfile="http:///schemas/RamlProfile/_5zgYgCJjEeiubr5XleL7dg/79" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/RamlProfile/_5zgYgCJjEeiubr5XleL7dg/79 raml.profile.uml#_853sgCJjEeiubr5XleL7dg">
+  <uml:Model xmi:id="_toXIABWDEei2Pf16bGHyZA" name="TypesAPI">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_ttxMcBWDEei2Pf16bGHyZA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_RMsRQBWGEei2Pf16bGHyZA">
+      <importedPackage xmi:type="uml:Package" href="raml.profile.uml#_li3LIBTAEeidgvnOijRjEQ"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_zn96ABWDEei2Pf16bGHyZA" name="TypeAPI">
+      <packagedElement xmi:type="uml:Class" xmi:id="_rUpuEBWFEei2Pf16bGHyZA" name="Invoices">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_xPswMBWFEei2Pf16bGHyZA" name="doIt">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_d663YBWGEei2Pf16bGHyZA" name="InvoiceJSON" type="_UUQ7QBesEeijf_nOsSz-FA" direction="out"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_N1_FEBWPEeizeM2S7qd3RQ" name="InvoiceXML" type="_VkraQBesEeijf_nOsSz-FA" direction="out"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_cTqPkBWPEeizeM2S7qd3RQ" name="Error" type="_UVNLQBWPEeizeM2S7qd3RQ" direction="out"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Y69dABcREeijf_nOsSz-FA" name="doThat">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_IRveYBfJEeijf_nOsSz-FA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="raml.profile.uml#_2bzjUBVyEei2Pf16bGHyZA"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="__hHtwBf-EeibULGaAM1YUA" name="doAlso">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_KsjEYBf_EeibULGaAM1YUA" name="invoiceJSON" type="_UUQ7QBesEeijf_nOsSz-FA"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_OXfsIBf_EeibULGaAM1YUA" name="invoiceXML" type="_VkraQBesEeijf_nOsSz-FA"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_u_BNgBjnEeibULGaAM1YUA" name="doToo" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_3nwk8BjnEeibULGaAM1YUA" name="invoiceJSON" type="_UUQ7QBesEeijf_nOsSz-FA"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_58PwEBjnEeibULGaAM1YUA" name="invoiceXML" type="_VkraQBesEeijf_nOsSz-FA"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_D1-U0CLZEeinxaq0fSTrow" name="doAll">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_IqB5sCLZEeinxaq0fSTrow" type="_qIq0sCLOEeinxaq0fSTrow" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_F3FOcBWHEei2Pf16bGHyZA" name="TypeModel">
+      <packagedElement xmi:type="uml:Class" xmi:id="_UVNLQBWPEeizeM2S7qd3RQ" name="Error">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_XNUA0BWPEeizeM2S7qd3RQ" name="message">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_-2glsB-tEeiRwcX64aBAzw" name="errorID">
+          <type xmi:type="uml:PrimitiveType" href="raml.profile.uml#_Epl3sBVzEei2Pf16bGHyZA"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_UUQ7QBesEeijf_nOsSz-FA" name="InvoiceJSON"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_VkraQBesEeijf_nOsSz-FA" name="InvoiceXML"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_d7IVEBjvEeibULGaAM1YUA" name="NoApiModel"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_qIq0sCLOEeinxaq0fSTrow" name="ShortString">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_u2FuoCLlEeinxaq0fSTrow" name="value">
+          <type xmi:type="uml:PrimitiveType" href="raml.profile.uml#_LAehQBVzEei2Pf16bGHyZA"/>
+        </ownedAttribute>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_QrUvEBjzEeibULGaAM1YUA" name="ErrorAPI">
+      <packagedElement xmi:type="uml:Class" xmi:id="_U34PEBjzEeibULGaAM1YUA" name="ReturnNoApi">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_U34PERjzEeibULGaAM1YUA" name="callMe">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_U34PEhjzEeibULGaAM1YUA" type="_d7IVEBjvEeibULGaAM1YUA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_xVi3oBj1Eei2d5XvK_SEkw" name="callMe">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_8zfhoBj1Eei2d5XvK_SEkw" type="_d7IVEBjvEeibULGaAM1YUA" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_a6s4cB5qEei8P659zouBBA" name="DescriptableAPI">
+      <packagedElement xmi:type="uml:Class" xmi:id="_jwa78B5qEei8P659zouBBA" name="Descriptable">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_HYPyMB56Eei8P659zouBBA" name="descriptable"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_PnCucB8QEeiRwcX64aBAzw" name="AllPropsAPI">
+      <packagedElement xmi:type="uml:Class" xmi:id="_nK6ZoB_aEeiRwcX64aBAzw" name="AllProps">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_PwMiAB_iEeiRwcX64aBAzw" name="allProps">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_sslRoCAKEeiRwcX64aBAzw" name="allQS">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_XzzdQBWIEei2Pf16bGHyZA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hvYOgCLOEeinxaq0fSTrow" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hvYOgSLOEeinxaq0fSTrow" key="Version" value="0.0.80"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hvYOgiLOEeinxaq0fSTrow" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hvYOgyLOEeinxaq0fSTrow" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hvYOhCLOEeinxaq0fSTrow" key="Date" value="2018-03-08"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hvYOhSLOEeinxaq0fSTrow" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Xz0EUBWIEei2Pf16bGHyZA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="raml.profile.uml#_853sgCJjEeiubr5XleL7dg"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="raml.profile.uml#_BDqk0Lc1EeWi7fsIsJk0Cg"/>
+    </profileApplication>
+  </uml:Model>
+  <RamlProfile:Resource xmi:id="_b3IIwBWIEei2Pf16bGHyZA" base_Class="_rUpuEBWFEei2Pf16bGHyZA" path="/invoices"/>
+  <RamlProfile:RamlApi xmi:id="_Y26RUBWOEeizeM2S7qd3RQ" base_Package="_zn96ABWDEei2Pf16bGHyZA" name="Type API" mediaType="application/json" baseUri="http://typeapi.org/api" version="1">
+    <traits xsi:nil="true"/>
+  </RamlProfile:RamlApi>
+  <RamlProfile:HttpResponse xmi:id="_O2anUBWPEeizeM2S7qd3RQ" statusCode="201" base_Parameter="_N1_FEBWPEeizeM2S7qd3RQ" mediaType="application/xml"/>
+  <RamlProfile:ApiModel xmi:id="_Wp-DMBWPEeizeM2S7qd3RQ" base_Class="_UVNLQBWPEeizeM2S7qd3RQ"/>
+  <RamlProfile:HttpResponse xmi:id="_dK9rABWPEeizeM2S7qd3RQ" statusCode="422" base_Parameter="_cTqPkBWPEeizeM2S7qd3RQ"/>
+  <RamlProfile:Post xmi:id="_fcQEABZGEeizeM2S7qd3RQ" base_Operation="_xPswMBWFEei2Pf16bGHyZA"/>
+  <RamlProfile:HttpResponse xmi:id="_lGi9cBZ_Eeijf_nOsSz-FA" statusCode="201" base_Parameter="_d663YBWGEei2Pf16bGHyZA" mediaType="application/json"/>
+  <RamlProfile:JsonSchema xmi:id="_YBQKYBesEeijf_nOsSz-FA" base_Class="_UUQ7QBesEeijf_nOsSz-FA" schema="invoice.json"/>
+  <RamlProfile:XmlSchema xmi:id="_YwB78BesEeijf_nOsSz-FA" base_Class="_VkraQBesEeijf_nOsSz-FA" schema="invoice.xsd#Invoice"/>
+  <RamlProfile:Get xmi:id="_VQs-cBflEeijf_nOsSz-FA" base_Operation="_Y69dABcREeijf_nOsSz-FA"/>
+  <RamlProfile:Put xmi:id="_CFrVMBf_EeibULGaAM1YUA" base_Operation="__hHtwBf-EeibULGaAM1YUA"/>
+  <RamlProfile:HttpRequest xmi:id="_OKvs4BjsEeibULGaAM1YUA" mediaType="application/json" base_Parameter="_3nwk8BjnEeibULGaAM1YUA"/>
+  <RamlProfile:HttpRequest xmi:id="_RmDWIBjsEeibULGaAM1YUA" mediaType="application/xml" base_Parameter="_58PwEBjnEeibULGaAM1YUA"/>
+  <RamlProfile:Resource xmi:id="_U4FDYBjzEeibULGaAM1YUA" base_Class="_U34PEBjzEeibULGaAM1YUA" path="/noapi"/>
+  <RamlProfile:Get xmi:id="_U4GRgBjzEeibULGaAM1YUA" base_Operation="_U34PERjzEeibULGaAM1YUA"/>
+  <RamlProfile:RamlApi xmi:id="_WqbKwBjzEeibULGaAM1YUA" base_Package="_QrUvEBjzEeibULGaAM1YUA"/>
+  <RamlProfile:Get xmi:id="_znco0Bj1Eei2d5XvK_SEkw" base_Operation="_xVi3oBj1Eei2d5XvK_SEkw"/>
+  <RamlProfile:RamlApi xmi:id="_fnUYkB5qEei8P659zouBBA" base_Package="_a6s4cB5qEei8P659zouBBA" description="!"/>
+  <RamlProfile:RamlResource xmi:id="_pSBjUB5qEei8P659zouBBA" base_Class="_jwa78B5qEei8P659zouBBA" path="/foo" description="!"/>
+  <RamlProfile:Get xmi:id="_LFjKYB56Eei8P659zouBBA" base_Operation="_HYPyMB56Eei8P659zouBBA" description="!"/>
+  <RamlProfile:RamlApi xmi:id="_TyBhIB8QEeiRwcX64aBAzw" base_Package="_PnCucB8QEeiRwcX64aBAzw" name="name" mediaType="mediaType" baseUri="baseUri" description="description" version="version" securedBy="securedBy" securitySchemes="securitySchemes" title="title" protocols="protocols" documentation="documentation" baseUriParameters="baseUriParameters">
+    <traits>- trait1</traits>
+    <traits>- trait2</traits>
+    <resourceTypes>- resourceType1</resourceTypes>
+    <resourceTypes>- resourceType2</resourceTypes>
+    <types>- type1</types>
+    <types>- type2</types>
+    <uses>- use1</uses>
+    <uses>- use2</uses>
+  </RamlProfile:RamlApi>
+  <RamlProfile:FacetedNumber xmi:id="_DowMsB-uEeiRwcX64aBAzw" base_Property="_-2glsB-tEeiRwcX64aBAzw" format="int64"/>
+  <RamlProfile:RamlResource xmi:id="_pgnFsB_aEeiRwcX64aBAzw" base_Class="_nK6ZoB_aEeiRwcX64aBAzw" path="/path" description="description" displayName="displayName" type="type" is="is" securedBy="securedBy"/>
+  <RamlProfile:Get xmi:id="_TidSsB_iEeiRwcX64aBAzw" base_Operation="_PwMiAB_iEeiRwcX64aBAzw" mediaType="mediaType" description="description" queryParameters="queryParameters" is="is" protocols="protocols"/>
+  <RamlProfile:QueryParameter xmi:id="_yyVH4CAKEeiRwcX64aBAzw" base_Parameter="_sslRoCAKEeiRwcX64aBAzw" default="default" example="example"/>
+  <RamlProfile:FacetedString xmi:id="_s225QCLOEeinxaq0fSTrow" base_DataType="_qIq0sCLOEeinxaq0fSTrow" maxLength="5"/>
+  <RamlProfile:Patch xmi:id="_Cxy7ACLZEeinxaq0fSTrow" base_Operation="_u_BNgBjnEeibULGaAM1YUA"/>
+  <RamlProfile:Head xmi:id="_FnFGECLZEeinxaq0fSTrow" base_Operation="_D1-U0CLZEeinxaq0fSTrow"/>
+</xmi:XMI>

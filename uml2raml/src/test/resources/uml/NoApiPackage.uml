@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RestProfile="http:///schemas/RestProfile/_aLhbENBGEeejEPbIEGrjRw/29" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/RestProfile/_aLhbENBGEeejEPbIEGrjRw/29 ../../../../../Models/rest.profile.uml#_aLhbEdBGEeejEPbIEGrjRw">
+  <uml:Model xmi:id="_klz9IA2mEeiBhZ-ujYM-1Q" name="NoApiPackage">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_ksLD0A2mEeiBhZ-ujYM-1Q">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_pb138A2mEeiBhZ-ujYM-1Q" name="MyAPI">
+      <packagedElement xmi:type="uml:Class" xmi:id="_rb2n4A2mEeiBhZ-ujYM-1Q" name="Foo"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_oGl8QA2mEeiBhZ-ujYM-1Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oGqNsA2mEeiBhZ-ujYM-1Q" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oGqNsQ2mEeiBhZ-ujYM-1Q" key="Version" value="0.0.30"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oGqNsg2mEeiBhZ-ujYM-1Q" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oGqNsw2mEeiBhZ-ujYM-1Q" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oGqNtA2mEeiBhZ-ujYM-1Q" key="Date" value="2017-11-23"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oGqNtQ2mEeiBhZ-ujYM-1Q" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oGpmoA2mEeiBhZ-ujYM-1Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../../../../../Models/rest.profile.uml#_aLhbEdBGEeejEPbIEGrjRw"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="../../../../../Models/rest.profile.uml#_tjKx8KiUEeWwcK3_Xosvcg"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_oGq0wA2mEeiBhZ-ujYM-1Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oGrb0Q2mEeiBhZ-ujYM-1Q" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oGrb0g2mEeiBhZ-ujYM-1Q" key="Version" value="0.0.2"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oGrb0w2mEeiBhZ-ujYM-1Q" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oGrb1A2mEeiBhZ-ujYM-1Q" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oGrb1Q2mEeiBhZ-ujYM-1Q" key="Date" value="2016-12-15"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oGrb1g2mEeiBhZ-ujYM-1Q" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oGrb0A2mEeiBhZ-ujYM-1Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../../../../../Models/apimodel.profile.uml#_E6FJUMKdEeap__TVx8DIlw"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="../../../../../Models/apimodel.profile.uml#_FxgYoL_AEeatMPmwGi7vqw"/>
+    </profileApplication>
+  </uml:Model>
+  <RestProfile:Resource xmi:id="_tyJJ0A2mEeiBhZ-ujYM-1Q" base_Class="_rb2n4A2mEeiBhZ-ujYM-1Q"/>
+</xmi:XMI>
