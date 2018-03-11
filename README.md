@@ -45,7 +45,7 @@ To use uml2raml in your own Maven projects, simply paste what follows inside the
     			<umlFile>${uml.file}</umlFile>
     			<ramlFile>${raml.file}</ramlFile>
     			<generateDescriptionFiles>true</generateDescriptionFiles>
-    			<generateDescriptionPath>${project.build.resources[0].directory}</generateDescriptionPath>
+    			<descriptionPath>${project.build.resources[0].directory}</descriptionPath>
     		</configuration>
     	</execution>
     </executions>
