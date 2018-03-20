@@ -247,7 +247,7 @@ Producing HTML documentation is very similar, but since there is no Java-based R
 <a name='how-to-oas'></a>
 #### Producing OpenAPI specifications
 
-Similarly to documentation, OAS files can be produced from RAML files with the Javascript-based [oas-raml-converter](https://github.com/mulesoft/oas-raml-converter), just be aware of [what could go wrong](https://github.com/mulesoft/oas-raml-converter/blob/master/docs/RAML10-to-OAS30.md#lost_semantics) and stay away from what causes troubles. The conversion is usually painless and can as well be integrated in your Maven workflow by invoking npm from you POM. Give a look to [this template](templates/raml2oas) to see how to proceed.
+Similarly to documentation, OAS files can be produced from RAML files with the Javascript-based [oas-raml-converter](https://github.com/mulesoft/oas-raml-converter), just be aware of [what could go wrong](https://github.com/mulesoft/oas-raml-converter/blob/master/docs/RAML10-to-OAS30.md#lost_semantics) and stay away from what causes troubles. The conversion is usually painless and can as well be integrated in your Maven workflow by invoking npm from your POM. Give a look to [this template](templates/raml2oas) to see how to proceed.
 
 <a name='faq'></a>
 # FAQ
@@ -257,8 +257,6 @@ Similarly to documentation, OAS files can be produced from RAML files with the J
 
 RAML is to OpenAPI what (super)Betamax was to VHS. A superior format, but it is doomed. The good thing is that we will get to a point where a version (4? 5?) of OpenAPI is RAML with a different syntax.
 In the meanwhile I could develop a twin OasProfile and implemented an OAS generator (unlikely, I'd prefer to wait and see what comes off from the [API Modeling Framework](https://raml-org.github.io/api-modeling-framework/)) or you simply translate your RAML files in OAS 3.0 files with the [oas-raml-converter](https://github.com/mulesoft/oas-raml-converter). Refer to [this how-to](#how-to-oas) for details.
-
-
 
 #### Is all that Papyrus-only?
 
