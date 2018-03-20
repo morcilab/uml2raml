@@ -2,7 +2,9 @@
 
 **uml2raml** is a tool to convert a UML class diagram to a [RAML](https://raml.org/) API specification.
 It consists of specific stereotypes and a model-to-text generator that transforms a UML model describing a REST API
-to a RAML file.
+to a RAML file (which, it turn, [can be translated](#faq-oas) to an OpenAPI OAS file).
+
+![recipes_uml_diagram](imgs/recipes.png)
 
 # Index
 
@@ -235,13 +237,28 @@ When creating a RAML file uml2raml just outputs the list of string values the ``
 Operating with resource types is very similar. Import the types definition files using the ``resourceTypes`` property of the ``<<RamlApi>>`` stereotype that is applied to the package describing the API. Apply the types to the resources by setting the ``type`` property of their ``<<RamlResource>>`` stereotype application.
 
 {{anchor}}how-to-code{{_anchor}}
-#### Producing code with Maven
+#### Producing code (or HTML documentation) with Maven
 
 Once your RAML file is created it can be used for multiple purposes (build, test, document and share as suggested in raml.org). If your goal is to create the skeleton of a JAX-RS application to deploy your API a great tool is [raml-to-jax-rs](https://github.com/mulesoft-labs/raml-for-jax-rs/blob/master/raml-to-jaxrs/).
-If you want to create a model-driven transformation chain UML &rarr; RAML &rarr; JAX-RS in your Maven project then this [pom.xml](templates/pom-raml2jaxrs-xml) is a good starting point.
+If you want to create a model-driven transformation chain UML &rarr; RAML &rarr; JAX-RS in your Maven project then this [pom.xml](templates/raml2jaxrs/pom.xml) is a good starting point.
+
+Producing HTML documentation is very similar, but since there is no Java-based RAML to HTML documentation generator we have to invoke the Javascript-based [raml2html](https://github.com/raml2html/raml2html) from Maven. The basic idea is to download a whole node.js instance, create a Gulp-based build script and invoke it from npm. It looks complex (and it is) but all you really have to do is adapt the ``pom.xml`` in [this](templates/raml2html/) directory to your needs.
+
+{{anchor}}how-to-oas{{_anchor}}
+#### Producing OpenAPI specifications
+
+Similarly to documentation, OAS files can be produced from RAML files with the Javascript-based [oas-raml-converter](https://github.com/mulesoft/oas-raml-converter), just be aware of [what could go wrong](https://github.com/mulesoft/oas-raml-converter/blob/master/docs/RAML10-to-OAS30.md#lost_semantics) and stay away from what causes troubles. The conversion is usually painless and can as well be integrated in your Maven workflow by invoking npm from you POM. Give a look to [this template](templates/raml2oas) to see how to proceed.
 
 {{anchor}}faq{{_anchor}}
 # FAQ
+
+{{anchor}}faq_oas{{_anchor}}
+#### What about OpenAPI?
+
+RAML is to OpenAPI what (super)Betamax was to VHS. A superior format, but it is doomed. The good thing is that we will get to a point where a version (4? 5?) of OpenAPI is RAML with a different syntax.
+In the meanwhile I could develop a twin OasProfile and implemented an OAS generator (unlikely, I'd prefer to wait and see what comes off from the [API Modeling Framework](https://raml-org.github.io/api-modeling-framework/)) or you simply translate your RAML files in OAS 3.0 files with the [oas-raml-converter](https://github.com/mulesoft/oas-raml-converter). Refer to [this how-to](#how-to-oas) for details.
+
+
 
 #### Is all that Papyrus-only?
 

@@ -1,0 +1,80 @@
+<!-- 
+This pom.xml shows hot to integrate oas-raml-converter - https://github.com/mulesoft/oas-raml-converter
+in the Maven build lifecycle.
+We make use of the frontend-maven-plugin - https://github.com/eirslett/frontend-maven-plugin
+to download and install an instance of node.js in which we deploy a generator built on 
+the fly using Gulp.
+To avoid the need to change the gulpfile we use the templating-maven-plugin
+to set up some parameters taken from the pom.xml (see below), so all
+you have to do in your project is to copy the raml2aos directory in it
+and setup the properties below.
+Run mnv generate-resources to generate the OAS file.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.foo.bar</groupId>
+	<artifactId>raml2oas</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<properties>
+		<raml.file>${project.basedir}/src/main/resources/file.raml</raml.file>
+		<oas.file>${project.basedir}/src/main/resources/file.oas</oas.file>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>templating-maven-plugin</artifactId>
+				<version>1.0.0</version>
+				<executions>
+					<execution>
+						<id>filter-raml2aos-files</id>
+						<goals>
+							<goal>filter-sources</goal>
+						</goals>
+						<configuration>
+							<sourceDirectory>${project.basedir}/raml2oas/templates</sourceDirectory>
+							<outputDirectory>${project.basedir}/raml2oas</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.github.eirslett</groupId>
+				<artifactId>frontend-maven-plugin</artifactId>
+				<version>1.6</version>
+				<executions>
+					<execution>
+						<id>install node and npm</id>
+						<goals>
+							<goal>install-node-and-npm</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>npm install</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<configuration>
+							<arguments>install</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>npm run build</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<configuration>
+							<arguments>run build</arguments>
+						</configuration>
+					</execution>
+				</executions>
+				<configuration>
+					<nodeVersion>v8.1.0</nodeVersion>
+					<workingDirectory>raml2oas</workingDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

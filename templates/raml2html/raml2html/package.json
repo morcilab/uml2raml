@@ -1,0 +1,11 @@
+{
+  "name": "raml2html",
+  "version": "1.0.0",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "raml2html": "7.0.0"
+  },
+  "scripts": {
+    "build": "gulp"
+  }
+}

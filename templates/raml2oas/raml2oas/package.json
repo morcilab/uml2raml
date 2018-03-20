@@ -1,0 +1,11 @@
+{
+  "name": "raml2oas",
+  "version": "1.0.0",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "oas-raml-converter": "1.1.28"
+  },
+  "scripts": {
+    "build": "gulp"
+  }
+}

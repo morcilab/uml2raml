@@ -1,0 +1,80 @@
+<!-- 
+This pom.xml shows hot to integrate raml2html - https://github.com/raml2html/raml2html
+in the Maven build lifecycle.
+We make use of the frontend-maven-plugin - https://github.com/eirslett/frontend-maven-plugin
+to download and install an instance of node.js in which we deploy a generator built on 
+the fly using Gulp.
+To avoid the need to change the gulpfile we use the templating-maven-plugin
+to set up some parameters taken from the pom.xml (see below), so all
+you have to do in your project is to copy the raml2html directory in it
+and setup the api.docfile property below (make sure to create the directory
+where you want to write your HTML file).
+Run mnv generate-resources to generate the HTML files.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.foo.bar</groupId>
+	<artifactId>raml2html</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<raml.file>${project.basedir}/src/main/resources/file.raml</raml.file>
+		<api.docfile>${project.basedir}/src/main/resources/docs/file.html</api.docfile>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>templating-maven-plugin</artifactId>
+				<version>1.0.0</version>
+				<executions>
+					<execution>
+						<id>filter-raml2html-files</id>
+						<goals>
+							<goal>filter-sources</goal>
+						</goals>
+						<configuration>
+							<sourceDirectory>${project.basedir}/raml2html/templates</sourceDirectory>
+							<outputDirectory>${project.basedir}/raml2html</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.github.eirslett</groupId>
+				<artifactId>frontend-maven-plugin</artifactId>
+				<version>1.6</version>
+				<executions>
+					<execution>
+						<id>install node and npm</id>
+						<goals>
+							<goal>install-node-and-npm</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>npm install</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<configuration>
+							<arguments>install</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>npm run build</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<configuration>
+							<arguments>run build</arguments>
+						</configuration>
+					</execution>
+				</executions>
+				<configuration>
+					<nodeVersion>v8.1.0</nodeVersion>
+					<workingDirectory>raml2html</workingDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
