@@ -2,7 +2,7 @@
 
 **uml2raml** is a tool to convert a UML class diagram to a [RAML](https://raml.org/) API specification.
 It consists of specific stereotypes and a model-to-text generator that transforms a UML model describing a REST API
-to a RAML file (which, it turn, [can be translated](#howto-oas) to an OpenAPI OAS file).
+to a RAML file (which, it turn, [can be translated](#how-to-oas) to an OpenAPI OAS file).
 
 ![recipes_uml_diagram](imgs/recipes.png)
 
@@ -252,7 +252,7 @@ Similarly to documentation, OAS files can be produced from RAML files with the J
 <a name='faq'></a>
 # FAQ
 
-<a name='faq_oas'></a>
+<a name='faq-oas'></a>
 #### What about OpenAPI?
 
 RAML is to OpenAPI what (super)Betamax was to VHS. A superior format, but it is doomed. The good thing is that we will get to a point where a version (4? 5?) of OpenAPI is RAML with a different syntax.
