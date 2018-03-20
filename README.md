@@ -2,7 +2,7 @@
 
 **uml2raml** is a tool to convert a UML class diagram to a [RAML](https://raml.org/) API specification.
 It consists of specific stereotypes and a model-to-text generator that transforms a UML model describing a REST API
-to a RAML file (which, it turn, [can be translated](#faq-oas) to an OpenAPI OAS file).
+to a RAML file (which, it turn, [can be translated](#howto-oas) to an OpenAPI OAS file).
 
 ![recipes_uml_diagram](imgs/recipes.png)
 
