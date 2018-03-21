@@ -1,5 +1,5 @@
 <!-- 
-This pom.xml shows hot to integrate oas-raml-converter - https://github.com/mulesoft/oas-raml-converter
+This pom.xml shows how to integrate oas-raml-converter - https://github.com/mulesoft/oas-raml-converter
 in the Maven build lifecycle.
 We make use of the frontend-maven-plugin - https://github.com/eirslett/frontend-maven-plugin
 to download and install an instance of node.js in which we deploy a generator built on 
