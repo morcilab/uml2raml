@@ -217,7 +217,7 @@ See the previous recipe and use the ``<<XmlSchema>>`` stereotype instead of ``<<
 
 #### Modeling a method that returns response bodies with different media types
 
-Non-stereotyped return (or out or in-out) parameters are assumed to model responses with the default media type set for the API. If you want a response with a different media type or even multiple responses with various media types you can apply the ``<<HttpResponse>>`` stereotype to the parameters and set stereotype's ``mediaType`` property accordingly. In case of multiple response parameters I suggest to model them as out parameters instead as return ones (yes, it's possible to have multiple return parameters in UML) in order to improve readability. Sadly there no way to see that in the diagram in Papyrus. Careful choice of parameters name usually is sufficient, as a last resort you can add a note to the diagram.
+Non-stereotyped return (or out or in-out) parameters are assumed to model responses with the default media type set for the API. If you want a response with a different media type or even multiple responses with various media types you can apply the ``<<HttpResponse>>`` stereotype to the parameters and set stereotype's ``mediaType`` property accordingly. In case of multiple response parameters I suggest to model them as out parameters instead as return ones (yes, it's possible to have multiple return parameters in UML) in order to improve readability. Sadly there no way to see that in the diagram in Papyrus. Careful choice of parameters names is usually sufficient, as a last resort you can add a note to the diagram.
 
 ![response_mediatypes](imgs/response_mediatypes.png)
 
